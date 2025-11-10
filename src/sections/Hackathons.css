@@ -1,0 +1,9 @@
+/* Add this to your existing Hackathons.css file */
+
+.hackathon-project-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e0e0e0; /* A bright, but not-quite-white color */
+  margin-bottom: 0.75rem;
+  font-style: italic; /* Optional: makes it stand out */
+}
