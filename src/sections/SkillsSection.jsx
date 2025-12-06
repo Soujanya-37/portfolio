@@ -2,7 +2,8 @@ import React from "react";
 import Section from "../components/Section.jsx";
 import { skills } from "../data/portfolioData.jsx";
 import { Code2, Cpu, Wrench, Languages, Sparkles } from "lucide-react";
-import SkillCloud from "../components/SkillCloud";
+import SkillCloud from "../components/skillcloud.jsx";
+
 
 export const SkillsSection = () => {
   return (
