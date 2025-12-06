@@ -162,7 +162,7 @@ export const projects = {
       description:
         "Architected a full-stack, real-time document collaboration platform using Firebase, Clerk, and Groq AI. Includes version control, role-based access, and rich-text editing with Quill.js.",
       tech: ["React", "Firebase", "Quill.js", "Groq AI", "Clerk", "Tailwind CSS"],
-      github: "https://github.com/your-doculink-repo",
+      github: "https://github.com/Soujanya-37/DocuLink",
       liveDemo: "",
       badge: "Full Stack",
       images: [
@@ -176,7 +176,7 @@ export const projects = {
       description:
         "A full-stack student collaboration and learning platform developed during the BITS Pilani National Hackathon. Features skill-sharing, mentorship booking, resource library, and user dashboards.",
       tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],
-      github: "https://github.com/adroit-achievers",
+      github: "https://github.com/Soujanya-37/Adroit_Achievers",
       liveDemo: "",
       badge: "Hackathon Project",
       images: [
@@ -190,7 +190,7 @@ export const projects = {
       description:
         "An ML-based face comparison and missing person detection system using OpenCV and feature-matching algorithms. Users upload images, and the system identifies matches from stored datasets.",
       tech: ["Python", "OpenCV", "Flask", "NumPy"],
-      github: "https://github.com/your-missing-people-finder",
+      github: "https://github.com/Soujanya-37/Find_Missing_People",
       liveDemo: "",
       badge: "AI / ML Project",
       images: [
@@ -204,7 +204,7 @@ export const projects = {
       description:
         "A real-time multi-client chat application built using core Java, socket programming, and multithreading. Supports multiple active connections and efficient message broadcasting.",
       tech: ["Java", "Sockets", "Multithreading"],
-      github: "https://github.com/your-javachatapp",
+      github: "https://github.com/Soujanya-37/JavaChatApp",
       liveDemo: "",
       badge: "Networking",
       images: ["/projects/chatapp-ui.png"],
@@ -215,7 +215,7 @@ export const projects = {
       description:
         "A Python-based traffic flow simulation system that models congestion, analyzes travel time, and visualizes patterns using algorithms for signal timing optimization.",
       tech: ["Python", "Simulation Algorithms"],
-      github: "https://github.com/your-trafficsim",
+      github: "https://github.com/Soujanya-37/TrafficSim",
       liveDemo: "",
       badge: "Simulation",
       images: ["/projects/traffic-sim.png"],
@@ -226,7 +226,7 @@ export const projects = {
       description:
         "A desktop productivity app implementing the Pomodoro Technique with customizable intervals, alerts, and a minimal Tkinter-based UI.",
       tech: ["Python", "Tkinter"],
-      github: "https://github.com/your-pomodoro-timer",
+      github: "https://github.com/Soujanya-37/PomodoroTimer",
       liveDemo: "",
       badge: "Productivity",
       images: ["/projects/pomodoro-ui.png"],
@@ -237,7 +237,7 @@ export const projects = {
       description:
         "A multilingual text translator built using HTML, CSS, JavaScript, and RapidAPI. Features responsive UI, language auto-detection, and fast translations.",
       tech: ["HTML", "CSS", "JavaScript", "RapidAPI"],
-      github: "https://github.com/your-anylang",
+      github: "https://github.com/Soujanya-37/AnyLangTranslator-CODEXINTERN",
       liveDemo: "",
       badge: "API Integration",
       images: ["/projects/translator-ui.png"],
@@ -248,7 +248,7 @@ export const projects = {
       description:
         "A React-based random string generator that lets users customize length, character sets, and copy-to-clipboard functionality. Built with optimized React hooks.",
       tech: ["React", "Tailwind CSS", "JavaScript"],
-      github: "https://github.com/your-stringify",
+      github: "https://github.com/Soujanya-37/Stringify-CODEXINTERN",
       liveDemo: "",
       badge: "React App",
       images: ["/projects/stringify.png"],
@@ -259,7 +259,7 @@ export const projects = {
       description:
         "A single-page React application demonstrating dynamic client-side routing using react-router-dom. Includes nested routes, protected routes, and smooth page transitions.",
       tech: ["React", "react-router-dom", "JavaScript"],
-      github: "https://github.com/your-routecraft",
+      github: "https://github.com/Soujanya-37/RouteCraft-CODEXINTERN",
       liveDemo: "",
       badge: "Frontend",
       images: ["/projects/routecraft.png"],
