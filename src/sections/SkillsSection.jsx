@@ -1,51 +1,79 @@
-import React from 'react';
-// Import icons used in this section
-import { 
-  Code, 
-  Zap, 
-  BookOpen, 
-  Briefcase, 
-  User 
-} from 'lucide-react';
+import React from "react";
+import Section from "../components/Section.jsx";
+import { skills } from "../data/portfolioData.jsx";
+import { Code2, Cpu, Wrench, Languages, Sparkles } from "lucide-react";
+import SkillCloud from "../components/SkillCloud";
 
-// FIX: Using relative paths WITHOUT extensions
-import Section from '../components/Section';
-import SkillPill from '../components/SkillPill';
-import { skills } from '../data/portfolioData'; 
+export const SkillsSection = () => {
+  return (
+    <Section id="skills">
+      <div className="max-w-6xl mx-auto">
 
-const SkillsSection = () => (
-  <Section 
-    id="skills" 
-    title={skills.title} 
-    icon={skills.icon} 
-    animate 
-    className="bg-gray-800"
-  >
-    <div className="mb-10">
-      <h3 className="text-xl font-bold text-blue-400 mb-4 text-center">My Core Toolkit</h3>
-      <div className="flex flex-wrap gap-3 justify-center">
-        {skills.mainSkills.map(skill => (
-          <SkillPill key={skill} skill={skill} />
-        ))}
-      </div>
-    </div>
+        {/* Title */}
+        <h2 className="text-4xl font-bold mb-2 flex items-center gap-3">
+          <Sparkles size={32} className="text-purple-400" />
+          Skills & Technologies
+        </h2>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      {skills.categories.map((category) => (
-        <div key={category.name}>
-          <h3 className="text-lg font-medium text-blue-400 mb-3 flex items-center">
-            {/* Dynamically create the icon component */}
-            {React.createElement(category.icon, { className: "w-5 h-5 mr-2" })} 
-            {category.name}
-          </h3>
-          <div className="flex flex-wrap gap-2">
-            {category.items.map(skill => <SkillPill key={skill} skill={skill} />)}
-          </div>
+        <p className="text-gray-400 mb-10 text-lg">
+          Tools and technologies I use to design, build, and ship impactful digital experiences.
+        </p>
+
+        {/* Core Toolkit */}
+        <h3 className="text-2xl font-semibold mb-4 text-purple-300">
+          My Core Toolkit
+        </h3>
+
+        <div className="flex flex-wrap gap-3 mb-12">
+          {skills.core.map((item, idx) => (
+            <span
+              key={idx}
+              className="px-4 py-2 rounded-full bg-blue-600/20 
+              text-blue-300 border border-blue-600/30 
+              hover:bg-blue-600/30 transition-all"
+            >
+              {item}
+            </span>
+          ))}
         </div>
-      ))}
-    </div>
-  </Section>
-);
 
-export { SkillsSection }; // FIX: Using named export
+        {/* Categories */}
+        <div className="grid md:grid-cols-2 gap-10">
 
+          <div>
+            <CategoryTitle icon={Code2} title="Programming Languages" />
+            <SkillChips items={skills.languages} />
+          </div>
+
+          <div>
+            <CategoryTitle icon={Cpu} title="Web Technologies" />
+            <SkillChips items={skills.web} />
+          </div>
+
+          <div>
+            <CategoryTitle icon={Sparkles} title="Frameworks & Libraries" />
+            <SkillChips items={skills.frameworks} />
+          </div>
+
+          <div>
+            <CategoryTitle icon={Wrench} title="Databases" />
+            <SkillChips items={skills.databases} />
+          </div>
+
+          <div>
+            <CategoryTitle icon={Wrench} title="Tools & Platforms" />
+            <SkillChips items={skills.tools} />
+          </div>
+
+          <div>
+            <CategoryTitle icon={Languages} title="Spoken Languages" />
+            <SkillChips items={skills.spoken} />
+          </div>
+
+        </div>
+      </div>
+    </Section>
+  );
+};
+
+c

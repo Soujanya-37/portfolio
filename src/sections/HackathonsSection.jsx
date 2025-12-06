@@ -1,52 +1,66 @@
 import React from "react";
-import Section from "../components/Section";
-import { hackathons } from "../data/portfolioData.js";
-import { IoLocationSharp } from "react-icons/io5";
-import "./Hackathons.css";
+import Section from "../components/Section.jsx";
+import { hackathons } from "../data/portfolioData.jsx";
+import { MapPin } from "lucide-react";
 
-export const HackathonsSection = () => {
+const HackathonsSection = () => {
   return (
-    <Section id="hackathons" title={hackathons.title} icon={hackathons.icon} animate>
-      <div className="max-w-4xl mx-auto">
-        <p className="text-lg text-gray-300 mb-8 text-center">
-          {hackathons.description}
-        </p>
-        <div className="space-y-6">
-          {hackathons.events.map((hackathon, index) => (
-            <div
-              key={`hackathon-${index}-${hackathon.name}`}
-              className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 transform hover:scale-[1.02]"
-            >
-              <div className="flex items-start justify-between">
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">
-                    {hackathon.name}
-                  </h3>
-                  <p className="text-gray-400 flex items-center gap-2">
-                    <IoLocationSharp className="w-4 h-4" />
-                    {hackathon.location}
-                  </p>
-                </div>
-                {hackathon.achievement && (
-                  <div className="flex items-center gap-2 bg-blue-500/20 px-3 py-1 rounded-full">
-                    <span className="text-sm font-medium text-blue-300">
-                      {hackathon.achievement}
-                    </span>
-                  </div>
-                )}
-              </div>
-              {hackathon.project && (
-                <p className="text-blue-400 mt-3 font-medium">
-                  Project: {hackathon.project}
-                </p>
+    <Section id="hackathons" title={hackathons.title} icon={hackathons.icon}>
+      <p className="text-gray-300 mb-8">{hackathons.description}</p>
+
+      <div className="space-y-10">
+        {hackathons.events.map((event, index) => (
+          <div
+            key={index}
+            className="p-6 rounded-xl bg-[#111827] border border-gray-800"
+          >
+            {/* Title + Badge */}
+            <div className="flex items-center justify-between">
+              <h3 className="text-2xl font-semibold text-white">
+                {event.name}
+              </h3>
+
+              {event.badge && (
+                <span className="px-3 py-1 text-sm bg-purple-600 rounded-full text-white">
+                  {event.badge}
+                </span>
               )}
-              <p className="text-gray-300 mt-3">
-                {hackathon.description}
-              </p>
             </div>
-          ))}
-        </div>
+
+            {/* Location */}
+            <div className="flex items-center gap-2 mt-2 text-gray-400">
+              <MapPin size={16} />
+              <p>{event.location}</p>
+            </div>
+
+            {/* Project Name */}
+            {event.project && (
+              <p className="mt-2 text-indigo-400 font-medium">
+                Project: {event.project}
+              </p>
+            )}
+
+            {/* Description */}
+            <p className="text-gray-300 mt-3">{event.description}</p>
+
+            {/* Image grid (Original style) */}
+            {event.images && event.images.length > 0 && (
+              <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                {event.images.map((img, idx) => (
+                  <img
+                    key={idx}
+                    src={img}
+                    alt=""
+                    className="rounded-lg border border-gray-700"
+                  />
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
       </div>
     </Section>
   );
 };
+
+export default HackathonsSection;

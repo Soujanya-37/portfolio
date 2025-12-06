@@ -1,13 +1,16 @@
 import React from 'react';
 // --- FIX: Corrected all paths to be relative and use named imports ---
 import { Navbar } from './sections/Navbar.jsx';
-import { Hero } from './sections/Hero.jsx';
+import { Hero } from "./sections/Hero.jsx";
+
+
 import { AboutSection } from './sections/AboutSection.jsx';
 import { SkillsSection } from './sections/SkillsSection.jsx';
 import { ExperienceSection } from './sections/ExperienceSection.jsx';
 import { ProjectsSection } from './sections/ProjectsSection.jsx';
 import { EducationSection } from './sections/EducationSection.jsx';
-import { HackathonsSection } from './sections/HackathonsSection.jsx';
+import HackathonsSection from "./sections/HackathonsSection.jsx";
+
 import { AchievementsSection } from './sections/AchievementsSection.jsx';
 import { ContactSection } from './sections/ContactSection.jsx';
 import { Footer } from './sections/Footer.jsx';

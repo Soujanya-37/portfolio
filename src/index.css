@@ -3,6 +3,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+
 /* Add your custom styles and animations here */
 html {
   scroll-behavior: smooth;
@@ -40,4 +51,25 @@ html {
 }
 .animate-spin-slow {
     animation: spin-slow 15s linear infinite;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-fadeIn.delay-150 {
+  animation-delay: 150ms;
+}
+
+.animate-fadeIn.delay-300 {
+  animation-delay: 300ms;
+}
+
+.animate-fadeIn.delay-500 {
+  animation-delay: 500ms;
 }
